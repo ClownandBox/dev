@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: dev
+  namespace: argocd
+spec:
+  sourceRepos:
+  - https://github.com/ClownandBox/dev.git
+  destinations:
+  - name: in-cluster
+    namespace: dev
+    server: https://kubernetes.default.svc
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: Pod
