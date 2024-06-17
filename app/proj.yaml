@@ -13,3 +13,7 @@ spec:
   namespaceResourceWhitelist:
   - group: '*'
     kind: Pod
+  - group: '*'
+    kind: AppProject
+  - group: '*'
+    kind: Application
