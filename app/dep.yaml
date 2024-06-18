@@ -14,5 +14,4 @@ spec:
     spec:
       containers:
       - name: dev
-        image: ubuntu:latest
-        command: ["sh", "-c", "sleep infinity"]
+        image: nginx:latest
