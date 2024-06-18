@@ -9,6 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   project: dev
   source:
-    path: demo
+    path: app
     repoURL: https://github.com/ClownandBox/dev.git
     targetRevision: HEAD
