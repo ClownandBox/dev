@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: dev
     server: https://kubernetes.default.svc
-  project: demo
+  project: dev
   source:
     path: app
     repoURL: https://github.com/ClownandBox/dev.git
