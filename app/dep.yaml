@@ -1,19 +1,14 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
-  name: dev-deployment
+  name: dev
   namespace: dev
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: dev
-  template:
-    metadata:
-      labels:
-        app: dev
-    spec:
-      containers:
-      - name: dev
-        image: ubuntu:latest
-        command: ["sh", "-c", "sleep infinity"]
+  destination:
+    namespace: dev
+    server: https://kubernetes.default.svc
+  project: dev
+  source:
+    path: demo
+    repoURL: https://github.com/ClownandBox/dev.git
+    targetRevision: HEAD
