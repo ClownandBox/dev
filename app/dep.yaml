@@ -17,7 +17,6 @@ spec:
       - name: dev
         image: ubuntu:latest
         command: ["sh", "-c", "sleep infinity"]
----
 apiVersion: v1
 kind: ConfigMap
 metadata:
