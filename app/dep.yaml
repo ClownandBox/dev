@@ -17,11 +17,3 @@ spec:
       - name: dev
         image: ubuntu:latest
         command: ["sh", "-c", "sleep infinity"]
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: my-config
-data:
-  key1: value1
-  key2: value2
