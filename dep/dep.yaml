@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dev-deployment
-  namespace: dev
 spec:
   replicas: 1
   selector:
@@ -17,11 +16,3 @@ spec:
       - name: dev
         image: ubuntu:latest
         command: ["sh", "-c", "sleep infinity"]
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: my-config
-data:
-  key1: value1
-  key2: value2
